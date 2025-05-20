@@ -1,16 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "api/webhook.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/webhook",
-        "dest": "api/webhook.js",
-        "methods": ["POST"]
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/webhook-cancel",
+      "dest": "api/webhook-cancel.js"
+    },
+    {
+      "src": "/api/webhook-update",
+      "dest": "api/webhook-update.js"
+    }
+  ]
+}

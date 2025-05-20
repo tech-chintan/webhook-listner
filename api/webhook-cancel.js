@@ -30,9 +30,10 @@ async function listSubscriptions(customerId) {
   return data.subscriptions || [];
 }
 
-app.post('/api/webhook', async (req, res) => {
+app.post('/api/webhook-cancel', async (req, res) => {
 
   let { subscription } = req.body
+  
   const props = subscription.properties || {};
   const refId = props._ref_id;
   const isUpsell = props._is_upsell_box === 'true';
@@ -50,9 +51,9 @@ app.post('/api/webhook', async (req, res) => {
     }
   }
 
-  console.log('webhhok called test' , subscription);
+  console.log('webhook-cancel');
 
-  res.status(200).json({ message: 'Webhook received from recharge 2' });
+  res.status(200).json({ message: 'Webhook received from webhook-cancel' });
 });
 
 app.listen(port, () => {
