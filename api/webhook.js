@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.post('/api/webhook', (req, res) => {
   console.log('Webhook received:', req.body);
-  res.status(200).json({ message: 'Webhook received successfully' });
+  res.status(200).json({ message: 'Webhook receivedsss successfully' });
 });
 
 app.listen(port, () => {
