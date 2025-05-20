@@ -12,8 +12,8 @@
       "dest": "api/webhook-cancel.js"
     },
     {
-      "src": "/api/webhook-update",
-      "dest": "api/webhook-update.js"
+      "src": "/api/webhook-skipped",
+      "dest": "api/webhook-skipped.js"
     }
   ]
 }
