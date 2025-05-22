@@ -22,6 +22,10 @@
     {
       "src": "/api/subscriptions",
       "dest": "api/get-subscriptions.js"
+    },
+    {
+      "src": "/api/recharge-product",
+      "dest": "api/getRechargeProduct.js"
     }
   ]
 }

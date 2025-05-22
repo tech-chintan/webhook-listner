@@ -8,7 +8,8 @@ app.use(cors({
     origin: 'https://catladybox.myshopify.com', // or '*' for dev (not secure for production)
     methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
-}));
+  }));
+  
 
 app.use(express.json());
 
