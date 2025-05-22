@@ -16,6 +16,7 @@ async function cancelSubscription(id) {
       'Content-Type': 'application/json',
     },
   });
+  console.log(res,123);
   if (!res.ok) {
     console.error(`Failed to cancel subscription ${id}:`, await res.text());
   }
