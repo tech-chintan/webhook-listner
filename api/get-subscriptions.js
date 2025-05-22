@@ -15,20 +15,21 @@ app.use(express.json());
 const RECHARGE_API_TOKEN = process.env.RECHARGE_API_TOKEN;
 
 async function listSubscriptions(subscriptionId) {
+    console.log(subscriptionId,23232);
     const url = `https://api.rechargeapps.com/subscriptions/${subscriptionId}`;
     const res = await fetch(url, {
         headers: { 'X-Recharge-Access-Token': RECHARGE_API_TOKEN }
     });
     const data = await res.json();
-    return data.subscriptions || [];
+    return data;
 }
 
-app.get('/api/subscriptions', async (req, res) => {
+app.post('/api/subscriptions', async (req, res) => {
     const { subscriptionId } = req.body
     console.log(subscriptionId,666);
     try {
-        await listSubscriptions(subscriptionId)
-        res.status(200).json({ message: 'sucess' });
+        let data  = await listSubscriptions(subscriptionId)
+        res.status(200).json(data);
     } catch (error) {
         console.error("Recharge update error:", error);
         res.status(500).json({ error: "Internal server error" });
