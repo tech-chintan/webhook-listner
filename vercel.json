@@ -30,6 +30,10 @@
     {
       "src": "/api/update-subscription-variant",
       "dest": "api/updateQueueOrder.js"
+    },
+    {
+      "src": "/api/get-shopify-product",
+      "dest": "api/getShopifyProduct.js"
     }
   ]
 }
