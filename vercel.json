@@ -26,6 +26,10 @@
     {
       "src": "/api/recharge-product",
       "dest": "api/getRechargeProduct.js"
+    },
+    {
+      "src": "/api/update-subscription-variant",
+      "dest": "api/updateQueueOrder.js"
     }
   ]
 }
