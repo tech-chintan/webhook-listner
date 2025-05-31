@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // Enable CORS for your Shopify frontend
 app.use(cors({
-    origin: 'https://catladybox.myshopify.com', // or '*' for dev (not secure for production)
+    origin: 'https://catlady.com', // or '*' for dev (not secure for production)
     methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
